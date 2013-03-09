@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <template>
-  <author>Mike van Riel</author>
-  <email>mike.vanriel@naenius.com</email>
-  <version>1.0.1</version>
-  <copyright>Mike van Riel 2012</copyright>
+  <author>Lance Cleveland</author>
+  <email>lance@lancecleveland.com</email>
+  <version>1.0.0</version>
+  <copyright>Lance Cleveland 2013</copyright>
   <description><![CDATA[
-      This is the 'Responsive' look and feel for phpDocumentor.
+      This is the 'CSA CodeDoc' look and feel for phpDocumentor, based
+      very much on the 'Responsive' phpDocumentor theme.
 
       This is a responsive template that is optimized to make the user's
       experience paramount.
