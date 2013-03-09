@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <template>
-    <description>My new template</description>
+    <description>Template for the CSA CodeDoc directory on the public site.</description>
     <author>Lance Cleveland <lance@lancecleveland.com></author>
     <version>1.0.0</version>
     <transformations>
