@@ -1,37 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <template>
-    <description>Template for the CSA CodeDoc directory on the public site.</description>
-    <author>Lance Cleveland <lance@lancecleveland.com></author>
-    <version>1.0.0</version>
-    <transformations>
-        <transformation query="copy" writer="FileIo" source="js" artifact="js"/>
-        <transformation query="copy" writer="FileIo" source="images" artifact="images"/>
-        <transformation query="copy" writer="FileIo" source="templates/abstract/css" artifact="css"/>
-        <transformation query="copy" writer="FileIo" source="templates/csa-codedoc/css" artifact="css"/>
-        <transformation query="copy" writer="FileIo" source="templates/csa-codedoc/js" artifact="js"/>
-        <transformation query="" writer="xsl" source="templates/csa-codedoc/index.xsl" artifact="index.html"/>
-        <transformation query="" writer="xsl" source="templates/abstract/sidebar.xsl" artifact="nav.html">
-            <parameters>
-                <variables>
-                    <section.dashboard.show>false</section.dashboard.show>
-                    <section.api.show/>
-                    <section.namespaces.show/>
-                    <section.packages.show/>
-                    <section.files.show/>
-                    <section.files.show-elements>false</section.files.show-elements>
-                    <section.reports.show>false</section.reports.show>
-                    <section.charts.show>false</section.charts.show>
-                </variables>
-            </parameters>
-        </transformation>
-        <transformation query="" writer="xsl" source="templates/abstract/report_markers.xsl" artifact="report_markers.html"/>
-        <transformation query="" writer="xsl" source="templates/abstract/report_parse_markers.xsl" artifact="report_parse_markers.html"/>
-        <transformation query="" writer="xsl" source="templates/abstract/report_deprecated.xsl" artifact="report_deprecated.html"/>
-        <transformation query="" writer="xsl" source="templates/abstract/content.xsl" artifact="content.html"/>
-        <transformation query="/project/file/@path" writer="xsl" source="templates/abstract/api-doc.xsl" artifact="{$path}"/>
-        <transformation query="" writer="sourcecode" source="" artifact=""/>
-        <transformation query="" writer="xsl" source="templates/abstract/graph_class.xsl" artifact="graph.html"/>
-        <transformation query="" writer="Graph" source="Class" artifact="classes.svg" />
-    </transformations>
+  <author>Mike van Riel</author>
+  <email>mike.vanriel@naenius.com</email>
+  <version>1.0.1</version>
+  <copyright>Mike van Riel 2012</copyright>
+  <description><![CDATA[
+      This is the 'Responsive' look and feel for phpDocumentor.
+
+      This is a responsive template that is optimized to make the user's
+      experience paramount.
+
+      To improve performance you can add the following to your .htaccess:
+
+      <ifModule mod_deflate.c>
+          <filesMatch "\.(js|css|html)$">
+              SetOutputFilter DEFLATE
+          </filesMatch>
+      </ifModule>
+  ]]></description>
+  <transformations>
+    <transformation query="copy" writer="FileIo" source="images" artifact="img"/>
+    <transformation query="copy" writer="FileIo" source="templates/responsive/img" artifact="img"/>
+    <transformation query="copy" writer="FileIo" source="templates/responsive/css" artifact="css"/>
+    <transformation query="copy" writer="FileIo" source="js" artifact="js"/>
+    <transformation query="copy" writer="FileIo" source="templates/responsive/js" artifact="js"/>
+    <transformation query="" writer="xsl" source="templates/responsive/index.xsl" artifact="index.html"/>
+    <transformation query="//namespace/@full_name" writer="xsl" source="templates/responsive/namespaces.xsl" artifact="namespaces/{$full_name}"/>
+    <transformation query="//package/@full_name" writer="xsl" source="templates/responsive/packages.xsl" artifact="packages/{$full_name}"/>
+    <transformation query="//class/full_name|//interface/full_name" writer="xsl" source="templates/responsive/class.xsl" artifact="classes/{$full_name}"/>
+    <transformation query="" writer="xsl" source="templates/responsive/reports/markers.xsl" artifact="markers.html"/>
+    <transformation query="" writer="xsl" source="templates/responsive/reports/errors.xsl" artifact="errors.html"/>
+    <transformation query="" writer="xsl" source="templates/responsive/reports/deprecated.xsl" artifact="deprecated.html"/>
+    <transformation query="" writer="xsl" source="templates/responsive/graphs/class.xsl" artifact="graph_class.html"/>
+    <transformation query="" writer="Graph" source="Class" artifact="classes.svg" />
+  </transformations>
 </template>
