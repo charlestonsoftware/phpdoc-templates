@@ -1,9 +1,9 @@
 {
-    "name": "phpdocumentor/template-responsive",
+    "name": "phpdocumentor/template-csa-codedoc",
     "type": "phpdocumentor-template",
-    "description": "Responsive modern template for phpDocumentor",
+    "description": "CSA version of responsive template for phpDocumentor",
     "keywords": ["documentation", "template", "phpdoc"],
-    "homepage": "http://www.phpdoc.org",
+    "homepage": "http://www.charlestonsw.com",
     "license": "MIT",
     "require": {
         "ext-xsl": "*",
