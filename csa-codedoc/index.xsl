@@ -9,7 +9,7 @@
                 <xsl:value-of select="$title" disable-output-escaping="yes"/>
                 <xsl:if test="$title = ''">phpDocumentor</xsl:if>
             </h1>
-            <h2>Documentation</h2>
+            <h2>Code Docs</h2>
         </div>
 
         <div class="row">

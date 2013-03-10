@@ -82,6 +82,9 @@
                     <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
                         <span class="icon-bar"></span> <span class="icon-bar"></span>
                         <span class="icon-bar"></span> </a>
+                    <a class="brand" href="http://www.charlestonsw.com/codedoc/">
+                        CSA :
+                    </a>
                     <a class="brand" href="{$root}index.html">
                         <xsl:value-of select="$title" disable-output-escaping="yes"/>
                         <xsl:if test="$title = ''">phpDocumentor</xsl:if>
@@ -143,6 +146,7 @@
 
     <xsl:template match="/" mode="content-footer">
         <footer class="span12">
+            A <a href="http://www.charlestonsw.com/">Charleston Software Associates</a> tweak to the Responsive Template.
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br />
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor <xsl:value-of select="$version"/></a> and<br />
             generated on <xsl:value-of select="date:date-time()" />.<br />
